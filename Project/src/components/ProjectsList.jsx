@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+// import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
 export default function ProjectsList({
   StartNewProject,
@@ -16,8 +16,8 @@ export default function ProjectsList({
         className="text-white p-2 ml-8 mt-6 px-2 rounded-md bg-rose-400"
         onClick={StartNewProject}
       >
-        <FontAwesomeIcon icon={faPlus} className="mr-1" />
-        Add Project
+        {/* <FontAwesomeIcon icon={faPlus} className="mr-1" /> */}
+        + Add Project
       </button>
       <ul className=" w-3/4 ml-8">
         {projects.map((project) => 
