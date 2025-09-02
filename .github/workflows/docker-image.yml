@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: react-build
-        path: Project/build
+        path: Project/dist
 
   build:
     runs-on: ubuntu-latest
@@ -44,7 +44,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: react-build
-        path: Project/build
+        path: Project/dist
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
