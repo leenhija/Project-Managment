@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Modal from "./modal";
+import Modal from "./Modal.jsx";
 export default function NewProject({onAdd , onCancel}){
     const title=useRef();
     const description=useRef();
