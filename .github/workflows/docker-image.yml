@@ -69,7 +69,7 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SERVER_SSH_KEY }}
         script: |
-          docker pull ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          docker pull ${{ secrets.DOCKER_USERNAME }}/react-app:latest
           docker stop react-app || true
           docker rm react-app || true
-          docker run -d -p 80:80 --name react-app ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          docker run -d -p 80:80 --name react-app ${{ secrets.DOCKER_USERNAME }}/react-app:latest
